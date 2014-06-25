@@ -1,0 +1,8 @@
+Scala
+// Program: helloWorld
+ 
+object helloWorld {
+    def main(args: Array[String]) {
+        Console.println("Hello, world!");
+    }
+}

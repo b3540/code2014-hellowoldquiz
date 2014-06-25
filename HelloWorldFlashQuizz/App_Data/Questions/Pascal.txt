@@ -1,0 +1,7 @@
+Pascal
+{ Program: helloWorld }
+ 
+Program helloWorld(output);
+Begin
+    WriteLn('Hello, world!')
+End.

@@ -1,0 +1,9 @@
+Ada
+-- Program: helloWorld
+ 
+with Text_IO;
+use Text_IO;
+procedure helloWorld is
+begin
+    Put_Line("Hello, world!");
+end helloWorld;

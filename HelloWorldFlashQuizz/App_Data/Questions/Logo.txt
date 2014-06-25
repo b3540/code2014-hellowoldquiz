@@ -1,0 +1,6 @@
+Logo
+; Program: helloWorld
+ 
+to helloWorld
+    print [Hello, world!]
+    end

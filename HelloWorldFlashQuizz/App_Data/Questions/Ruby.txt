@@ -1,0 +1,8 @@
+Ruby
+# Program: helloWorld
+ 
+class HelloWorld
+  def greet
+    puts "Hello, world!"
+  end
+end

@@ -1,0 +1,6 @@
+PHP
+# Program: helloWorld
+ 
+function helloWorld() {
+    echo "Hello, world!\n";
+}

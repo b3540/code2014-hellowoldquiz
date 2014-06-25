@@ -1,0 +1,6 @@
+JavaScript
+// Program: helloWorld
+ 
+function helloWorld() {
+    document.write("Hello, world!");
+}

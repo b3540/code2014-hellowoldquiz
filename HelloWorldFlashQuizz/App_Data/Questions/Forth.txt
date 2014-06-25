@@ -1,0 +1,5 @@
+Forth
+\ Program: helloWorld
+ 
+: helloWorld ( -- )
+    ." Hello, world!" cr ;
