@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="~/favicon.png" rel="icon" type="image/png" />
+    -->
+    <title></title>
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-app="HelloWorldFlashQuiz" ng-controller="QuizController">
+
+        <!-- Stage.1: Start Page -->
+        <div class="entry-form" ng-show="currentStage == 0">
+            <h1>
+                Drew Robbins<br/>
+                Hello World Flash Quiz
+            </h1>
+            <button ng-click="startQuiz()">
+                Start
+            </button>
+        </div>
+
+        <!-- Stage.2: DuringQuiz -->
+        <div ng-class='{"quiz-view":true, correct:currentQuestion.Judgement == 0, incorrect:currentQuestion.Judgement == 1}' ng-show="currentStage == 2">
+
+            <div class="code"><pre>{{currentQuestion.Code}}</pre></div>
+
+            <button ng-repeat="opt in currentQuestion.Options"
+                    ng-class="{option:true, disabled:currentQuestion.Judgement != null, selected: currentQuestion.SelectedOption == opt}"
+                    ng-disabled="currentQuestion.Judgement != null"
+                    ng-click="answer(opt)">
+                {{opt}}
+            </button>
+        </div>
+
+        <!-- Stage.3: Finish -->
+        <div class="score-view" ng-show="currentStage == 3">
+            <h1>Score</h1>
+
+            <div ng-repeat="q in questions" ng-class="{Q:true, correct:q.Judgement == 0, incorrect:q.Judgement == 1}">
+                - Q{{$index + 1}} {{q.CorrectAnswer}}
+                <span ng-repeat="opt in q.Options" ng-class="{option: true, selected: q.SelectedOption == opt}">
+                    {{opt}}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>

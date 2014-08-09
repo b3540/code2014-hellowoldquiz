@@ -15,3 +15,96 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+/* Quiz View */
+.quiz-view {
+}
+
+    .quiz-view .code {
+        background-color: #eee;
+        border: solid 2px #888;
+        padding: 1em;
+        height: 12em;
+        border-radius: 8px;
+        margin-bottom: 1em;
+    }
+
+    .quiz-view .ng-enter {
+        opacity: 0;
+        -moz-transition: opacity linear 0.5s;
+        -o-transition: opacity linear 0.5s;
+        -webkit-transition: opacity linear 0.5s;
+        transition: opacity linear 0.5s;
+    }
+
+        .quiz-view .ng-enter.ng-enter-active {
+            opacity: 1;
+        }
+
+/*.quiz-view .ng-leave {
+        opacity: 1;
+        -moz-transition: opacity linear 0.5s;
+        -o-transition: opacity linear 0.5s;
+        -webkit-transition: opacity linear 0.5s;
+        transition: opacity linear 0.5s;
+    }
+
+        .quiz-view .ng-leave.ng-leave-active {
+            opacity: 0;
+        }*/
+
+
+.entry-form {
+    text-align: center;
+}
+
+    .entry-form button,
+    .quiz-view button.option {
+        width: 10em;
+        height: 3em;
+        margin-right: 1em;
+        background-color: #0094ff;
+        color: #fff;
+        border: none;
+        margin-top: 1em;
+        cursor: pointer;
+    }
+
+        .quiz-view button.option.disabled {
+            background-color: #ccc;
+            color: #888;
+            cursor: default;
+        }
+
+.quiz-view.correct button.option.selected {
+    background-color: #0a0;
+    color: #fff;
+}
+
+.quiz-view.incorrect button.option.selected {
+    background-color: #a00;
+    color: #fff;
+}
+
+
+
+/* Score View */
+
+.score-view .option {
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: #888;
+    background-color: #fff;
+}
+
+.score-view .Q.correct .option.selected {
+    color: #fff;
+    background-color: #0a0;
+}
+
+.score-view .Q.incorrect .option.selected {
+    color: #fff;
+    background-color: #a00;
+}

@@ -7,6 +7,8 @@ namespace HelloWorldFlashQuizz.Models
 {
     public class Question
     {
+        public int Number { get; set; }
+
         public string Code { get; set; }
 
         public string[] Options { get; set; }
